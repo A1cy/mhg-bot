@@ -2,23 +2,21 @@
 
 本项目提供了相关的 docker 镜像，你需要一个 vps 来部署，当然你也可以在本地的电脑上部署。需要注意的是，如果你的网络无法请求 OpenAI 的 API 地址，您需要配置代理。如果你想开放给其他用户使用，最好还需要一个域名，并将域名解析到服务器。
 
-您还需要一个 OpenAI 的API Key，网上有获取多种方案，请自行搜索。
+您还需要一个 OpenAI 的 API Key，网上有获取多种方案，请自行搜索。
 
 ## 部署
 
 ### 快速部署脚本
 
-*对于技术知识了解不多的选手，如果你看不懂下面的内容，可以看我之前写的博客文章[《一行命令部署自己的ChatGPT客户端》](https://wongsnotes.com/p/deploying-your-own-chatgpt-client-with-one-line-of-command/)*
+_对于技术知识了解不多的选手，如果你看不懂下面的内容，可以看我之前写的博客文章[《一行命令部署自己的 ChatGPT 客户端》](https://wongsnotes.com/p/deploying-your-own-chatgpt-client-with-one-line-of-command/)_
 
 **注意：此脚本目前仅在 Ubuntu Server 22.04 LTS 上验证过。**
-
 
 ```
 bash <(curl -Ls https://raw.githubusercontent.com/WongSaang/chatgpt-ui/main/deployment.sh)
 ```
 
 ### Docker Compose
-
 
 #### 准备 docker-compose.yml
 
@@ -38,7 +36,7 @@ services:
     environment:
       - SERVER_DOMAIN=http://backend-web-server
       - DEFAULT_LOCALE=zh
-    #      - NUXT_PUBLIC_APP_NAME='ChatGPT UI' # APP 名称
+    #      - NUXT_PUBLIC_APP_NAME='MHG AI' # APP 名称
     #      - NUXT_PUBLIC_TYPEWRITER=true # 是否开启 打字机 效果
     #      - NUXT_PUBLIC_TYPEWRITER_DELAY=50 # 打字机效果的延迟时间，单位：毫秒，默认：50
     depends_on:
@@ -98,7 +96,6 @@ docker-compose up --pull always -d
 - `up`：启动 Docker Compose 配置中的服务。
 - `--pull always`：每次启动服务前，都会从 Docker 镜像仓库中拉取最新版本的镜像。这样可以确保使用的镜像始终是最新的。
 - `-d`：在后台运行服务。如果不加这个参数，服务会在当前终端窗口中运行，直到用户手动停止服务。
-
 
 ## 部署完成之后
 

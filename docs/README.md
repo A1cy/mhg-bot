@@ -1,17 +1,16 @@
-
 # Introduction
 
-ChatGPT UI is an unofficial ChatGPT web client. It supports multiple users, multiple languages, and multiple database connections for persistent data storage, such as Mysql, PostgreSQL, and Sqlite.
+MHG AI is an unofficial ChatGPT web client. It supports multiple users, multiple languages, and multiple database connections for persistent data storage, such as Mysql, PostgreSQL, and Sqlite.
 
 This project consists of two parts, the client-side and the server-side:
 
 - Client-side, based on [Nuxt](https://nuxt.com/), project address: [https://github.com/WongSaang/chatgpt-ui](https://github.com/WongSaang/chatgpt-ui)
 - Server-side, based on [Django](https://djangoproject.com/), project address: [https://github.com/WongSaang/chatgpt-ui-server](https://github.com/WongSaang/chatgpt-ui-server)
 
-
 ## Features
 
 ### Client-side
+
 - User system, supporting user registration, login, password modification, and more.
 - Multi-language user interface, supporting multiple languages.
 - Persistent data storage, supporting Mysql, PostgreSQL, and Sqlite databases.
@@ -26,11 +25,11 @@ This project consists of two parts, the client-side and the server-side:
 - Supports configuring multiple API Keys.
 
 ### Server-side
+
 - The server-side has an administrative panel.
 - User management.
 - Conversation and message management.
 - Common configurations.
-
 
 ## Original Intention
 

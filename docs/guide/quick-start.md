@@ -16,7 +16,6 @@ bash <(curl -Ls https://raw.githubusercontent.com/WongSaang/chatgpt-ui/main/depl
 
 ### Docker Compose
 
-
 #### Prepare docker-compose.yml
 
 The project provides a sample `docker-compose.yml`. If you want to customize the configuration, please refer to the [configuration reference](/en/guide/configuration) section.
@@ -36,7 +35,7 @@ services:
     environment:
       - SERVER_DOMAIN=http://backend-web-server
       - DEFAULT_LOCALE=en
-#      - NUXT_PUBLIC_APP_NAME='ChatGPT UI' # The name of the application
+#      - NUXT_PUBLIC_APP_NAME='MHG AI' # The name of the application
 #      - NUXT_PUBLIC_TYPEWRITER=true # Whether to enable the typewriter effect, default false
 #      - NUXT_PUBLIC_TYPEWRITER_DELAY=50 # The delay time of the typewriter effect, default 50ms
     depends_on:

@@ -1,16 +1,16 @@
 # 介绍
 
-ChatGPT UI 是一个非官方的 ChatGPT Web 客户端。它支持多用户，多语言，多种数据库连接进行数据持久化存储，例如：Mysql、PostgreSQL 和 Sqlite 等。
+MHG AI 是一个非官方的 ChatGPT Web 客户端。它支持多用户，多语言，多种数据库连接进行数据持久化存储，例如：Mysql、PostgreSQL 和 Sqlite 等。
 
 本项目项目包括客户端和服务端两部分。
 
 - 客户端，基于 [Nuxt](https://nuxt.com/)，项目地址：[https://github.com/WongSaang/chatgpt-ui](https://github.com/WongSaang/chatgpt-ui)
 - 服务端，基于 [Django](https://djangoproject.com/)，项目地址：[https://github.com/WongSaang/chatgpt-ui-server](https://github.com/WongSaang/chatgpt-ui-server)
 
-
 ## 功能与特性
 
 ### 客户端
+
 - 用户系统，支持用户注册、登录、修改密码等。
 - 用户界面多语言，支持多种语言。
 - 数据持久化，支持 Mysql、PostgreSQL 和 Sqlite 等数据库。
@@ -25,11 +25,11 @@ ChatGPT UI 是一个非官方的 ChatGPT Web 客户端。它支持多用户，�
 - 支持配置多个 API Key
 
 ### 服务端
+
 - 服务端拥有一个管理面板
 - 用户管理
 - 对话和消息管理
 - 常用配置
-
 
 ## 初衷
 

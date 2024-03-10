@@ -6,11 +6,11 @@
 
 `chatgpt-ui-wsgi-server` 镜像提供环境变量 `DB_URL` 来配置与外部数据库的连接，以下是 `DB_URL` 的链接格式对照表。
 
-| 数据库                | 链接                                             |
-|----------------------|--------------------------------------------------|
-| PostgreSQL           | postgres://USER:PASSWORD@HOST:PORT/DATABASE_NAME |
-| MySQL                | mysql://USER:PASSWORD@HOST:PORT/DATABASE_NAME    |
-| SQLite               | sqlite:///PATH                                   |
+| 数据库     | 链接                                             |
+| ---------- | ------------------------------------------------ |
+| PostgreSQL | postgres://USER:PASSWORD@HOST:PORT/DATABASE_NAME |
+| MySQL      | mysql://USER:PASSWORD@HOST:PORT/DATABASE_NAME    |
+| SQLite     | sqlite:///PATH                                   |
 
 例如我使用 PostgreSQL，则配置如下：
 
@@ -25,15 +25,15 @@ backend-wsgi-server:
 
 如果你开放用户注册功能，并需要向用户发送邮箱激活链接，需要在 `wsgi-server` 服务中配置以下环境变量：
 
-| 参数                  | 说明                                             | 默认值 |
-|----------------------|--------------------------------------------------|-----|
-| ACCOUNT_EMAIL_VERIFICATION | 邮箱验证方式，可选值： none, optional, mandatory | optional |
-| EMAIL_HOST                 | SMTP 服务器地址    |  smtp.mailgun.org    |
-| EMAIL_PORT                 | SMTP 服务器端口号  |   587       |
-| EMAIL_HOST_USER            | 用户名             |    -         |
-| EMAIL_HOST_PASSWORD        | 密码              |     -     |
-| EMAIL_USE_TLS              | 是否加密           |   True       |
-| EMAIL_FROM                 | 发件邮箱            |     webmaster@localhost  |
+| 参数                       | 说明                                             | 默认值              |
+| -------------------------- | ------------------------------------------------ | ------------------- |
+| ACCOUNT_EMAIL_VERIFICATION | 邮箱验证方式，可选值： none, optional, mandatory | optional            |
+| EMAIL_HOST                 | SMTP 服务器地址                                  | smtp.mailgun.org    |
+| EMAIL_PORT                 | SMTP 服务器端口号                                | 587                 |
+| EMAIL_HOST_USER            | 用户名                                           | -                   |
+| EMAIL_HOST_PASSWORD        | 密码                                             | -                   |
+| EMAIL_USE_TLS              | 是否加密                                         | True                |
+| EMAIL_FROM                 | 发件邮箱                                         | webmaster@localhost |
 
 ## API 代理
 
@@ -63,14 +63,13 @@ backend-wsgi-server:
 
 ## 客户端配置
 
-| 参数                  | 说明                                      | 默认值                    |
-|----------------------|-------------------------------------------|---------------------------|
-| SERVER_DOMAIN                     | 服务端地址                    | http://backend-web-server |
-| DEFAULT_LOCALE                    | 默认语言                      | en                        |
-| NUXT_PUBLIC_APP_NAME              | 应用名称                      |  ChatGPT UI               |
-| NUXT_PUBLIC_TYPEWRITER            | 是否开启 打字机 效果[true/false]|  true                    |
-| NUXT_PUBLIC_TYPEWRITER_DELAY      | 打字机效果的延迟时间，单位：毫秒|  50                       |
-
+| 参数                         | 说明                             | 默认值                    |
+| ---------------------------- | -------------------------------- | ------------------------- |
+| SERVER_DOMAIN                | 服务端地址                       | http://backend-web-server |
+| DEFAULT_LOCALE               | 默认语言                         | en                        |
+| NUXT_PUBLIC_APP_NAME         | 应用名称                         | MHG AI                    |
+| NUXT_PUBLIC_TYPEWRITER       | 是否开启 打字机 效果[true/false] | true                      |
+| NUXT_PUBLIC_TYPEWRITER_DELAY | 打字机效果的延迟时间，单位：毫秒 | 50                        |
 
 ## 用户注册控制
 
