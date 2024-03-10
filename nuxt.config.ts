@@ -8,14 +8,12 @@ export default defineNuxtConfig({
       title: appName,
     },
   },
-  runtimeConfig: {
-    public: {
-      appName: appName,
-      typewriter: false,
-      typewriterDelay: 50,
-      customApiKey: false,
-      serverDomain: process.env.SERVER_DOMAIN,
-    },
+  publicRuntimeConfig: {
+    appName: appName,
+    typewriter: false,
+    typewriterDelay: 50,
+    customApiKey: false,
+    serverDomain: process.env.SERVER_DOMAIN, // Ensure this is set in your environment variables
   },
   build: {
     transpile: ["vuetify"],
@@ -39,36 +37,11 @@ export default defineNuxtConfig({
   i18n: {
     strategy: "no_prefix",
     locales: [
-      {
-        code: "en",
-        iso: "en-US",
-        name: "English",
-        file: "en-US.json",
-      },
-      {
-        code: "zh-CN",
-        iso: "zh-CN",
-        name: "简体中文",
-        file: "zh-CN.json",
-      },
-      {
-        code: "ru",
-        iso: "ru-RU",
-        name: "Русский",
-        file: "ru-RU.json",
-      },
-      {
-        code: "fr",
-        iso: "fr-FR",
-        name: "Français",
-        file: "fr-FR.json",
-      },
-      {
-        code: "es",
-        iso: "es-ES",
-        name: "Español",
-        file: "es-ES.json",
-      },
+      { code: "en", iso: "en-US", name: "English", file: "en-US.json" },
+      { code: "zh-CN", iso: "zh-CN", name: "简体中文", file: "zh-CN.json" },
+      { code: "ru", iso: "ru-RU", name: "Русский", file: "ru-RU.json" },
+      { code: "fr", iso: "fr-FR", name: "Français", file: "fr-FR.json" },
+      { code: "es", iso: "es-ES", name: "Español", file: "es-ES.json" },
     ],
     lazy: true,
     langDir: "lang",
