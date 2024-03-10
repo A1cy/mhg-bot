@@ -5,7 +5,7 @@ export default defineEventHandler(async (event) => {
         target: 'https://mhg-backend.onrender.com', // The actual target server
         changeOrigin: true,
         pathRewrite: {
-            '^/api/': '/api/', // You might need to adjust the rewrite rules based on your setup
+            '^/api/': '/'
         },
     })(event.req, event.res, (error) => {
         if (error) {
